@@ -1,0 +1,188 @@
+* {
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	text-decoration: none;
+}
+
+html {
+	font: 300 20px/1.5 ".SFNSText-Regular", ".HelveticaNeueDeskInterface", ".LucidaGrandeUI", "Ubuntu", "Segoe UI", Helvetica, sans-serif;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+}
+
+body {
+	margin: 0 1rem 5rem;
+	padding: 0 calc(50% - (880px / 2));
+}
+
+h1, h2, caption, p, nav, td, th {
+	padding: .5rem .75rem;
+}
+
+h2, table {
+	margin: 3em 0 0;
+}
+
+caption, h2 {
+	font-size: 125%;
+	font-weight: bold;
+	text-align: left;
+}
+
+key,
+tbody th {
+	font-family: Menlo, Monaco, Consolas, monospace;
+}
+
+h1 {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+h1 + p {
+	margin: -1em 0;
+}
+
+a {
+	border-bottom: 1px solid;
+	padding-bottom: 1px;
+	color: #66D;
+}
+
+a:hover,
+a:focus {
+	color: #900;
+}
+
+a:active {
+	color: #000;
+}
+
+ul {
+	padding-left: 2em;
+}
+
+li {
+	margin: 0 0 1em;
+}
+
+nav ul {
+	padding-left: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 80%;
+	opacity: .675;
+}
+
+key {
+	background-color: #f5f5f5;
+	border-radius: .25em;
+	color: #393;
+	padding: .25em;
+	font-size: 75%;
+}
+
+table {
+	box-shadow: 0 1px 0 0 rgba(0,0,0,.05);
+	border-collapse: collapse;
+	width: 100%;
+}
+
+caption {
+	margin-bottom: -2rem;
+}
+
+thead th {
+	font-size: 80%;
+}
+
+tbody tr:nth-child(even) > * {
+	background-color: rgba(0,0,64,.0375);
+}
+
+tbody th {
+	font-size: 80%;
+	text-align: left;
+	width: 1%;
+	white-space: nowrap;
+}
+
+tbody td {
+	box-shadow: inset 1px 0 0 0 #FFF;
+	font-weight: bold;
+	text-align: center;
+}
+
+[aria-label="pass"]::after {
+	color: #393;
+	content: "✔";
+}
+
+[aria-label="fail"]::after {
+	color: #C33;
+	content: "✖";
+}
+
+[aria-label="yes"]::after {
+	color: #393;
+	content: "☑";
+	font-size: 1rem;
+}
+
+[aria-label="no"]::after {
+	color: #C33;
+	content: "☐";
+	font-size: 1rem;
+}
+
+@media screen and (max-width: 40em) {
+	table, caption, tbody, tbody th, tbody td, tr {
+		display: block;
+	}
+
+	caption {
+		margin: 0;
+	}
+
+	thead {
+		display: none;
+	}
+
+	tbody th {
+		font-size: 60%;
+		padding: 1em 1em 0;
+		width: auto;
+	}
+
+	tbody td {
+		padding: .5em 1em;
+		text-align: right;
+	}
+
+	tbody td::before {
+		content: attr(data-name);
+		display: inline-block;
+		font-size: 70%;
+		font-weight: normal;
+		margin-right: 1em;
+		text-align: right;
+	}
+
+	tbody td::after {
+		display: inline-block;
+		width: 1em;
+	}
+}

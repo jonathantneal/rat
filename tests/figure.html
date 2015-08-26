@@ -1,0 +1,53 @@
+<!doctype html>
+<title>RAT Test: Figure content</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<style>
+figure {
+	display: table;
+	margin: 0 auto;
+}
+
+figure + img {
+	display: block;
+}
+
+figcaption {
+	border-bottom: 2px solid #DDD;
+	caption-side: bottom;
+	display: table-caption;
+	padding: .25em 0;
+	direction: rtl;
+}
+
+figcaption > * {
+	direction: ltr;
+	display: table-cell;
+	line-height: 1rem;
+	text-align: left;
+	vertical-align: middle;
+}
+
+figcaption cite {
+	font-size: 75%;
+	min-width: 10em;
+	padding-left: .5em;
+	text-align: right;
+	vertical-align: text-top;
+}
+
+figcaption span {
+	text-align: left;
+	width: 20rem;
+}
+</style>
+
+<figure role="presentation">
+	<img src="//placehold.it/300x200" alt="" aria-labelledby="figure-text-1" aria-describedby="figure-cite-1">
+	<figcaption>
+		<cite id="figure-cite-1">Photo by Jane Smith</cite>
+		<span id="figure-text-1">A beautiful photo.</span>
+	</figcaption>
+</figure>

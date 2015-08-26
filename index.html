@@ -1,0 +1,314 @@
+<!doctype html>
+<title>RAT: Results from Assistive Technology</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link href="assets/style.css" rel="stylesheet">
+
+<h1><abbr title="Results from Assistive Technology">RAT</abbr></h1>
+
+<p>
+	<strong>RAT</strong> <small>(Results from Assistive Technology)</small> is a collection of markup patterns and how they are handled by different assistive technology.
+</p>
+
+<nav>
+	<ul>
+		<li><a href="https://github.com/jonathantneal/rat">GitHub source</a>
+		<li><a href="tests/hidden.html">Current RAT test</a>
+		<li><a href="howto.html">How to test</a>
+	</ul>
+</nav>
+
+<table>
+	<caption>Markup</caption>
+	<thead>
+		<tr>
+			<th aria-hidden="true"></th>
+			<th>is readable</th>
+			<th>is visible</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>[aria-hidden]</th>
+			<td aria-label="yes"><td aria-label="yes">
+		</tr>
+		<tr>
+			<th>[aria-hidden="true"]</th>
+			<td aria-label="no"><td aria-label="yes">
+		</tr>
+		<tr>
+			<th>[aria-hidden="false"]</th>
+			<td aria-label="yes"><td aria-label="yes">
+		</tr>
+		<tr>
+			<th>[aria-hidden="nonsense"]</th>
+			<td aria-label="yes"><td aria-label="yes">
+		</tr>
+		<tr>
+			<th>[hidden]</th>
+			<td aria-label="no"><td aria-label="no">
+		</tr>
+		<tr>
+			<th>[hidden]<br>[aria-hidden="false"]</th>
+			<td aria-label="yes"><td aria-label="no">
+		</tr>
+		<tr>
+			<th>position: absolute<br>clip: rect(0 0 0 0);</th>
+			<td aria-label="yes"><td aria-label="no">
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>VoiceOver 7</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Chrome 44</th>
+			<th>Firefox 40</th>
+			<th>Safari 9</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>[aria-hidden]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[aria-hidden="true"]</th>
+			<td aria-label="pass"><td aria-label="fail"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[aria-hidden="false"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[aria-hidden="nonsense"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[hidden]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[hidden]<br>[aria-hidden="false"]</th>
+			<td aria-label="fail"><td aria-label="fail"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>position: absolute<br>clip: rect(0 0 0 0);</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>role="presentation"
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>NVDA 2015.3</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Chrome 44</th>
+			<th>Firefox 40</th>
+			<th>Internet Explorer 11</th>
+			<th>Edge 12</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>[aria-hidden]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[aria-hidden="true"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[aria-hidden="false"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[aria-hidden="nonsense"]</th>
+			<td aria-label="pass"><td aria-label="fail"><td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[hidden]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[hidden]<br>[aria-hidden="false"]</th>
+			<td aria-label="fail"><td aria-label="fail"><td aria-label="fail"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>position: absolute<br>clip: rect(0 0 0 0);</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>JAWS 16</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Chrome 44</th>
+			<th>Firefox 40</th>
+			<th>Internet Explorer 11</th>
+			<th>Edge 12</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>[aria-hidden]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[aria-hidden="true"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[aria-hidden="false"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[aria-hidden="nonsense"]</th>
+			<td aria-label="pass"><td aria-label="fail"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[hidden]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[hidden]<br>[aria-hidden="false"]</th>
+			<td aria-label="fail"><td aria-label="fail"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>position: absolute<br>clip: rect(0 0 0 0);</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>Windows Eyes 9</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Chrome 44</th>
+			<th>Firefox 40</th>
+			<th>Internet Explorer 11</th>
+			<th>Edge 12</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>[aria-hidden]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[aria-hidden="true"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[aria-hidden="false"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[aria-hidden="nonsense"]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[hidden]</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>[hidden]<br>[aria-hidden="false"]</th>
+			<td aria-label="fail"><td aria-label="fail"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+		<tr>
+			<th>position: absolute<br>clip: rect(0 0 0 0);</th>
+			<td aria-label="pass"><td aria-label="pass"><td aria-label="pass"><td aria-label="fail">
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>ChromeVox</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Mac OS</th>
+			<th>Windows</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>[aria-hidden]</th>
+			<td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[aria-hidden="true"]</th>
+			<td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[aria-hidden="false"]</th>
+			<td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[aria-hidden="nonsense"]</th>
+			<td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[hidden]</th>
+			<td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>[hidden]<br>[aria-hidden="false"]</th>
+			<td aria-label="pass"><td aria-label="pass">
+		</tr>
+		<tr>
+			<th>position: absolute<br>clip: rect(0 0 0 0);</th>
+			<td aria-label="pass"><td aria-label="pass">
+		</tr>
+	</tbody>
+</table>
+
+<h2>
+	The good news
+</h2>
+
+<p>
+	The <strong>Mac OS</strong> and <strong>Windows</strong> flagship browsers pass all tests with at least one <strong><abbr title="assistive technology">AT</abbr></strong>.
+</p>
+
+<p>
+	While limited to <strong>Chrome</strong>, <strong>ChromeVox</strong> may be the only cross-platform <strong><abbr title="assistive technology">AT</abbr></strong>, and it passes all tests.
+</p>
+
+<p>
+	<strong>VoiceOver</strong> for <strong>iOS</strong> appears to produce the same results as <strong>VoiceOver</strong> for <strong>Mac OS</strong>.
+</p>
+
+<h2>
+	The bad news
+</h2>
+
+<p>
+	<strong>VoiceOver</strong> does not work with modifier keys in <strong>Chrome</strong>.
+	In <strong>Safari</strong> and <strong>Firefox</strong>, <strong>VoiceOver</strong> only works with modifier keys (<key>Control + Option</key>).
+</p>
+
+<p>
+	<strong>Firefox</strong> has no scenario where it will read visibly hidden content by <code>[hidden][aria-hidden="false"]</code>.
+</p>
+
+<p>
+	At this time, <strong>Edge</strong> should <strong>not</strong> be considered an accessible browser.
+	It does not work with <small>(nearly)</small> any <strong><abbr title="assistive technology">AT</abbr></strong>, including <strong>Windows</strong>’ own <strong>Narrator</strong> application.
+	<strong><abbr title="NonVisual Desktop Access">NVDA</abbr></strong> 2015.3 adds support for <strong>Edge</strong>, but the tests fail miserably.
+</p>
+
+<script src="assets/script.js"></script>
