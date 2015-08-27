@@ -1,0 +1,69 @@
+<!doctype html>
+<title>RAT Test: Inputs</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<form>
+	<p>
+		<label>Search</label>
+		<input type="search">
+	</p>
+	<!--
+	VoiceOver:
+		Chrome:
+			Search
+			edit text blank
+			Search
+			text blank
+		Firefox:
+			Search
+			space, text
+		Safari:
+			Search
+			search text field
+	ChromeVox:
+		Search
+		edit text, search entry
+	JAWS:
+		...
+	-->
+
+	<p>
+		<label for="search-2">Search</label>
+		<input id="search-2" type="search">
+	</p>
+	<!--
+	VoiceOver:
+		Chrome:
+			Search
+			Search edit text
+		Firefox:
+			Search
+			Search, text
+		Safari:
+			Search
+			search text field
+	ChromeVox:
+		Search, edit text, search entry
+	-->
+
+	<p>
+		<label for="search-3">Search the site</label>
+		<input id="search-3" type="search">
+	</p>
+	<!--
+	VoiceOver:
+		Chrome:
+			Search the site
+			Search the site, edit text
+		Firefox:
+			Search the site
+			Search the site, text
+		Safari:
+			Search the site
+			Search the site, search text field
+	ChromeVox:
+		Search, edit text, search entry
+	-->
+</form>
