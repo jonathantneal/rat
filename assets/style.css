@@ -83,6 +83,10 @@ blockquote {
 	margin: 1em 0;
 }
 
+footer nav {
+	margin: 5em 0;
+}
+
 nav ul {
 	padding-left: 0;
 }
