@@ -1,0 +1,185 @@
+<!doctype html>
+<title>Media Content Results - RAT</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link href="assets/style.css" rel="stylesheet">
+
+<h1>Media Content Results - <abbr title="Results from Assistive Technology">RAT</abbr></h1>
+
+<nav aria-label="RAT">
+	<ul>
+		<li><a href="./">All tests</a>
+		<li><a href="tests/media.html">This test</a>
+		<li><a href="howto.html">How to test</a>
+		<li><a href="https://github.com/jonathantneal/rat">GitHub source</a>
+	</ul>
+</nav>
+
+<section>
+	<h2><code>&lt;audio&gt;</code> without <code>controls</code></h2>
+	<pre>&lt;audio src=&quot;&quot;&gt;</pre>
+	<p>
+		An <code>&lt;audio&gt;</code> without controls is not announced in any browser.
+		This is expected per (CITATION).
+	</p>
+</section>
+
+<section>
+	<h2><code>&lt;audio&gt;</code> with <code>controls</code></h2>
+	<pre>&lt;audio src=&quot;&quot; controls&gt;</pre>
+	<section>
+		<h3>How it’s announced in <strong>Narrator</strong>:</h3>
+		<ul class="announced">
+			<li>audio, group
+				<ul>
+					<li>play button (space)
+					<li>time elapsed / skip back, button, shift + left arrow skips back 30 seconds
+					<li>seek, 0%, slider, left and right arrow keys skip 10 seconds; shift + left or right arrow keys skip 30 seconds
+					<li>time remaining / skip ahead, button, shift + right arrow skips ahead 30 seconds
+					<li>mute, button (M)
+					<li>volume, 100%, slider, up and down arrow keys raise or lower volume
+				</ul>
+		</ul>
+		<p>
+			<strong>Narrator</strong> announces <q>space</q> and <q>M</q> because they are keyboard controls to play or pause the audio, and to mute or unmute the audio.
+		</p>
+	</section>
+	<section>
+		<h3>How it’s announced in <strong>JAWS</strong> using <strong>Edge</strong>:</h3>
+		<ul class="announced">
+			<li>audio
+				<ul>
+					<li>play button, to activate press space bar
+					<li>time elapsed / skip back button, to activate press space bar, shift + left arrow skips back 30 seconds (period)
+					<li>seek left right slider, 0 percent, to increase or decrease use the arrow keys, left and right arrow keys skip 10 seconds; shift + left or right arrow keys skip
+					<li>time remaining / skip ahead button, to activate press space bar, shift + right arrow skips ahead 30 seconds (period)
+					<li>mute button, to activate press space bar (M)
+					<li>volume left right slider, 95%, to increase or decrease use the arrow keys, up and down arrow keys raise or lower volume
+				</ul>
+		</ul>
+		<p>
+			I’m not sure why <q>period</q> is spoken by <strong>JAWS</strong>.
+			The <q>M</q> is spoken because it is a keyboard control to mute or unmute the audio.
+		</p>
+	</section>
+	<section>
+		<h3>How it’s announced in <strong>VoiceOver</strong>:</h3>
+		<ul class="announced">
+			<li>audio, toolbar
+				<p>in audio toolbar, 6 items
+				<ul>
+					<li>play, selected, button, begin playback
+					<li>0:00
+					<li>/ 7:29
+					<li>0, slider, audio time scrubber
+					<li>mute, selected, button, mute audio track
+					<li>download media, selected, button, media control
+				</ul>
+		</ul>
+		<p>
+			<strong>VoiceOver</strong> announces the current and remaining time as <q>zero, zero zero</q>.
+			Remaining time verbalizes the <q>slash</q>.
+		</p>
+		<p>
+			Volume controls are not accessible using <strong>VoiceOver</strong> navigation.
+			However, the volume controls can be tabbed into, and they are announced as <q class="announced">1, audio control</q>; where <em>1</em> is the audio volume on a scale of <em>0</em> to <em>1</em>.
+		</p>
+	</section>
+</section>
+
+<section>
+	<h2><code>&lt;video&gt;</code> without <code>controls</code></h2>
+	<pre>&lt;video src=&quot;&quot;&gt;</pre>
+	<section>
+		<h3>How it’s announced in <strong>Narrator</strong>:</h3>
+	</section>
+	<section>
+		<h3>How it’s announced in <strong>JAWS</strong>:</h3>
+	</section>
+	<section>
+		<h3>How it’s announced in <strong>VoiceOver</strong>:</h3>
+		<ul class="announced">
+			<li>video, toolbar
+			<li>video, toolbar
+		</ul>
+		<p>
+			<strong>VoiceOver</strong> really does announce <code>&lt;video src=&quot;&quot;&gt;</code> as two toolbars with no content inside of them.
+		</p>
+	</section>
+</section>
+
+<section>
+	<h2><code>&lt;video&gt;</code> with <code>controls</code></h2>
+	<pre>&lt;video src=&quot;&quot; controls&gt;</pre>
+	<section>
+		<h3>How it’s announced in <strong>Narrator</strong>:</h3>
+		<ul class="announced">
+			<li>video, group
+				<ul>
+					<li>play button (space)
+					<li>time elapsed / skip back, button, shift + left arrow skips back 30 seconds
+					<li>seek, 0%, slider, left and right arrow keys skip 10 seconds; shift + left or right arrow keys skip 30 seconds
+					<li>time remaining / skip ahead, button, shift + right arrow skips ahead 30 seconds
+					<li>mute, button (M)
+					<li>volume, 100%, slider, up and down arrow keys raise or lower volume
+					<li>full screen, button, alt + enter
+				</ul>
+		</ul>
+		<p>
+			<strong>Narrator</strong> announces <q>space</q> and <q>M</q> because they are keyboard controls to play or pause the video, and to mute or unmute the audio.
+		</p>
+	</section>
+	<section>
+		<h3>How it’s announced in <strong>JAWS</strong>:</h3>
+		<ul class="announced">
+			<li>video
+				<ul>
+					<li>play button, to activate press space bar
+					<li>time elapsed / skip back button, to activate press space bar, shift + left arrow skips back 30 seconds (period)
+					<li>seek left right slider, 0 percent, to increase or decrease use the arrow keys, left and right arrow keys skip 10 seconds; shift + left or right arrow keys skip
+					<li>time remaining / skip ahead button, to activate press space bar, shift + right arrow skips ahead 30 seconds (period)
+					<li>mute button, to activate press space bar (M)
+					<li>volume left right slider, 100%, to increase or decrease use the arrow keys, up and down arrow keys raise or lower volume
+					<li>full screen button, to activate press space bar, alt + enter
+				</ul>
+		</ul>
+		<p>
+			I’m not sure why <q>period</q> is spoken by <strong>JAWS</strong>.
+			The <q>M</q> is spoken because it is a keyboard control to mute or unmute the audio.
+		</p>
+	</section>
+	<section>
+		<h3>How it’s announced in <strong>VoiceOver</strong>:</h3>
+		<ul class="announced">
+			<li>video, toolbar
+			<li>video, toolbar
+				<p>in video toolbar, 6 items
+				<ul>
+					<li>play, selected, button, begin playback
+					<li>0:00
+					<li>/ 7:29
+					<li>0, slider, movie time scrubber
+					<li>enter full screen, selected, button, play movie in full screen mode
+					<li>mute, selected, button, mute audio track
+					<li>download media, selected, button, media control
+				</ul>
+		</ul>
+		<p>
+			<strong>VoiceOver</strong> really does announce the video canvas itself as a toolbar with no content inside of it.
+		</p>
+		<p>
+			<strong>VoiceOver</strong> announces the current and remaining time as <q>zero, zero zero</q>.
+			Remaining time verbalizes the <q>slash</q>.
+		</p>
+		<p>
+			Volume controls are not accessible using <strong>VoiceOver</strong> navigation.
+			However, the volume controls can be tabbed into, and they are announced as <q class="announced">1, audio control</q>; where <q class="announced">1</q> is the audio volume on a scale of <q class="announced">0</q> to <q class="announced">1</q>.
+		</p>
+		<p>
+			Upon entering full screen, <strong>VoiceOver</strong>’s access to the controls are lost as soon as they visually disappear.
+		</p>
+	</section>
+</section>
+
+<script src="assets/script.js"></script>
