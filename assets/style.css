@@ -75,6 +75,14 @@ li {
 	margin: 0 0 1em;
 }
 
+blockquote {
+	background-color: #ffc;
+	border-radius: 1em;
+	box-shadow: 0 0 5px 0 #88c;
+	padding: .75em 2em;
+	margin: 1em 0;
+}
+
 nav ul {
 	padding-left: 0;
 }
